@@ -60,10 +60,9 @@ function Sidebar({
           lg:hidden overflow-y-auto
           transition-all duration-300 ease-out
 
-          ${
-            sidebarOpen
-              ? "opacity-100 visible"
-              : "opacity-0 invisible"
+          ${sidebarOpen
+            ? "opacity-100 visible"
+            : "opacity-0 invisible"
           }
         `}
       />
@@ -71,43 +70,45 @@ function Sidebar({
       {/* Sidebar */}
       <aside
         className={`
-          fixed
-          z-50
-          top-0
-          left-0
+    fixed
+    z-50
+    top-0
+    left-0
 
-          lg:top-4
-          lg:left-4
+    lg:top-4
+    lg:left-4
 
-          h-screen
-          lg:h-[calc(100vh-32px)]
+    h-screen
+    lg:h-[calc(100vh-32px)]
 
-          w-72
+    w-72
 
-          bg-white/90
-          dark:bg-slate-900/90
+    bg-white/90
+    dark:bg-slate-900/90
 
-          backdrop-blur-2xl
+    backdrop-blur-2xl
 
-          border-r
-          lg:border
+    border-r
+    lg:border
 
-          border-slate-200
-          dark:border-slate-800
+    border-slate-200
+    dark:border-slate-800
 
-          lg:rounded-[32px]
+    lg:rounded-[32px]
 
-          shadow-2xl
+    shadow-2xl
 
-          transition-all
-          duration-300
+    transition-all
+    duration-300
 
-          ${
-            sidebarOpen
-              ? "translate-x-0"
-              : "-translate-x-full lg:translate-x-0"
+    flex
+    flex-col
+
+    ${sidebarOpen
+            ? "translate-x-0"
+            : "-translate-x-full lg:translate-x-0"
           }
-        `}
+  `}
       >
         {/* Glow */}
         <div
@@ -245,13 +246,16 @@ function Sidebar({
         </div>
 
         {/* Navigation */}
-        <nav
-          className="
-          p-4
-          space-y-2
-          mt-2
-        "
-        >
+       <nav
+  className="
+  flex-1
+  overflow-y-auto
+  sidebar-scroll
+  p-4
+  space-y-2
+  mt-2
+"
+>
           {menuItems.map((item) => (
             <NavLink
               key={item.name}
@@ -274,9 +278,8 @@ function Sidebar({
                 transition-all
                 duration-300
 
-                ${
-                  isActive
-                    ? `
+                ${isActive
+                  ? `
                       bg-gradient-to-r
                       from-violet-500
                       to-blue-500
@@ -285,7 +288,7 @@ function Sidebar({
 
                       shadow-lg
                     `
-                    : `
+                  : `
                       text-slate-700
                       dark:text-slate-300
 
@@ -333,12 +336,12 @@ function Sidebar({
               )}
             </NavLink>
           ))}
-        </nav>
 
-        {/* Usage Card */}
-        <div className="px-4 mt-4">
-          <div
-            className="
+
+          {/* Usage Card */}
+          <div className="px-4">
+            <div
+              className="
             rounded-3xl
 
             border
@@ -347,19 +350,19 @@ function Sidebar({
 
             p-4
           "
-          >
-            <div className="flex items-center justify-between">
-              <span className="text-sm">
-                Monthly Usage
-              </span>
+            >
+              <div className="flex items-center justify-between">
+                <span className="text-sm">
+                  Monthly Usage
+                </span>
 
-              <span className="text-sm font-semibold">
-                76%
-              </span>
-            </div>
+                <span className="text-sm font-semibold">
+                  76%
+                </span>
+              </div>
 
-            <div
-              className="
+              <div
+                className="
               h-2
               bg-slate-200
               dark:bg-slate-700
@@ -368,9 +371,9 @@ function Sidebar({
               mt-3
               overflow-hidden
             "
-            >
-              <div
-                className="
+              >
+                <div
+                  className="
                 h-full
                 w-[76%]
 
@@ -378,13 +381,16 @@ function Sidebar({
                 from-violet-500
                 to-blue-500
               "
-              />
+                />
+              </div>
             </div>
           </div>
-        </div>
+
+        </nav>
+
 
         {/* AI Card */}
-        <div className="absolute bottom-6 left-4 right-4">
+      <div className="p-4 mt-auto">
           <div
             className="
             rounded-3xl
