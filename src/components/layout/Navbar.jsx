@@ -309,9 +309,9 @@ xl:w-[400px]
 
         {/* Notification */}
         <div
-          ref={notificationRef}
-          className="relative"
-        >
+  ref={notificationRef}
+  className="relative flex justify-end"
+>
           <button
             onClick={() =>
               setShowNotifications(
@@ -366,22 +366,25 @@ xl:w-[400px]
           </button>
 
           {showNotifications && (
-            <div
-              className="
-              absolute
-              right-0
-              mt-3
-              w-80
-              bg-white
-              dark:bg-slate-900
-              rounded-3xl
-              border
-              border-slate-200
-              dark:border-slate-800
-              shadow-2xl
-              overflow-hidden
-            "
-            >
+           <div
+  className="
+    absolute
+    top-[60px]
+    right-0
+    w-72
+    sm:w-80
+    max-w-[calc(100vw-16px)]
+    z-[99999]
+    bg-white
+    dark:bg-slate-900
+    rounded-3xl
+    border
+    border-slate-200
+    dark:border-slate-800
+    shadow-2xl
+    overflow-hidden
+  "
+>
               <div
                 className="
                 p-4

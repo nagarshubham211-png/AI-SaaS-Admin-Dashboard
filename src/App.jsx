@@ -9,6 +9,7 @@ import Candidates from "./pages/Candidates";
 import Analytics from "./pages/Analytics";
 import ResumeAnalyzer from "./pages/ResumeAnalyzer";
 import Settings from "./pages/Settings";
+import ScrollToTop from "./components/ui/ScrollToTop"
 
 import AIAssistant from "./components/ui/AIAssistant";
 
@@ -87,6 +88,8 @@ function App() {
   "
   style={{ paddingTop: "100px" }}
 >   
+
+ <ScrollToTop />
           <Routes>
             <Route
               path="/"

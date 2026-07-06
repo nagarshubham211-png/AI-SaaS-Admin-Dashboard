@@ -38,28 +38,32 @@ function AIAssistant() {
 
       {/* Chat Window */}
       {open && (
-        <div
-          className="
-            fixed
-            bottom-24
-            right-6
-            w-96
-            h-[520px]
+       <div
+  className="
+    fixed
+    bottom-20
+    left-2
+    right-2
+    w-auto
+    h-[75vh]
+    max-h-[520px]
 
-            bg-white
-            dark:bg-slate-900
+    sm:left-auto
+    sm:right-6
+    sm:bottom-24
+    sm:w-96
 
-            border
-            border-slate-200
-            dark:border-slate-800
-
-            rounded-[32px]
-            shadow-2xl
-
-            overflow-hidden
-            z-50
-          "
-        >
+    bg-white
+    dark:bg-slate-900
+    border
+    border-slate-200
+    dark:border-slate-800
+    rounded-[32px]
+    shadow-2xl
+    overflow-hidden
+    z-[9999]
+  "
+>
           {/* Header */}
           <div
             className="

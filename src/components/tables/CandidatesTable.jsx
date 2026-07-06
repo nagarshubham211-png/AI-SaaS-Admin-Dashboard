@@ -74,7 +74,7 @@ function CandidatesTable() {
       "
     >
       {/* Header */}
-      <div className="flex justify-between items-center mb-8">
+     <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-8">
         <div>
           <h3
             className="
@@ -98,8 +98,8 @@ function CandidatesTable() {
           </p>
         </div>
 
-        <div className="flex gap-3">
-          <div className="relative">
+       <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+         <div className="relative flex-1">
             <Search
               size={18}
               className="
@@ -119,11 +119,12 @@ function CandidatesTable() {
                 setSearch(e.target.value)
               }
               className="
-                pl-10
-                pr-4
-                py-3
-
-                rounded-2xl
+               pl-10
+pr-4
+py-3
+w-full
+sm:w-72
+rounded-2xl
 
                 border
                 border-slate-200
@@ -148,25 +149,23 @@ function CandidatesTable() {
             onChange={(e) =>
               setStatusFilter(e.target.value)
             }
-            className="
-              px-4
-              py-3
-
-              rounded-2xl
-
-              border
-              border-slate-200
-              dark:border-slate-700
-
-              bg-white
-              dark:bg-slate-800
-
-              text-slate-700
-              dark:text-slate-200
-
-              outline-none
-            "
-          >
+            
+  className="
+    w-full
+    sm:w-auto
+    px-4
+    py-3
+    rounded-2xl
+    border
+    border-slate-200
+    dark:border-slate-700
+    bg-white
+    dark:bg-slate-800
+    text-slate-700
+    dark:text-slate-200
+    outline-none
+  "
+>
             <option>All</option>
             <option>Shortlisted</option>
             <option>Review</option>
